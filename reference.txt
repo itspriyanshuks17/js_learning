@@ -1,0 +1,23 @@
+Data types in JS: (to check data type: typeof())
+1. Number
+2. String
+3. Boolean
+4. Undefined
+5. Null
+6. BigInt 
+7. Symbol
+
+
+Objects-> collection of values
+
+const Object_name = {
+    key : value
+    key1 : value
+    key2 : value
+    key3 : value
+    key4 : value
+};
+
+to acces any key:
+1. Object_name.key
+2. Object_name["key"]
