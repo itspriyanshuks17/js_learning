@@ -8,6 +8,14 @@ Data types in JS: (to check data type: typeof())
 7. Symbol
 
 
+Variable:
+1. var: variable can be re-declared & updated. A global scope variable
+
+2. let: variable cannot be re-declared but can be updated. A block scope variable
+
+3. const: Variable cannot be re-declared or updated. Ablock scope variable
+
+
 Objects-> collection of values
 
 const Object_name = {
@@ -18,6 +26,6 @@ const Object_name = {
     key4 : value
 };
 
-to acces any key:
+to access any key:
 1. Object_name.key
 2. Object_name["key"]
