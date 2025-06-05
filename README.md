@@ -62,9 +62,9 @@ console.log(n);
 typeof(price);
 ```
 
-## 2. Non-Primitive Data Types:
+### 2. Non-Primitive Data Types:
 
-### 1. Objects-> collection of values
+#### 1. Objects-> collection of values
 The key values in declared objects can be changed even though it is declared with the keyword *const*, but cannot create a dupilcate object with the same name.
 
 ```
