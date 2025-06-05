@@ -42,16 +42,75 @@ console.log("Priyanshu Kumar Sharma");*/
 // console.log(age2);
 
 /*Objects*/
-const student = {
-    name:"Priyanshu",
-    age:20,
-    cgpa: 9.8,
-    isPass: true
-};
+// const student = {
+//     name:"Priyanshu",
+//     age:20,
+//     cgpa: 9.8,
+//     isPass: true
+// };
 
 
-//Updating key values
-student['age'] = student['age'] + 1;
+// //Updating key values
+// student['age'] = student['age'] + 1;
 
-console.log(student);
-console.log(student.age);
+// console.log(student);
+// console.log(student.age);
+
+// Condtional Statement
+// if statement
+// 1. age
+// let age = 25;
+
+// if(age >= 18) {
+//     console.log("You can vote");
+// }
+
+// if(age<18) {
+//     console.log("You cant vote");
+// }
+
+// 2. color mode
+// let mode = "dark";
+// let color;
+
+// if(mode==="dark") {
+//     color="black";
+// }
+
+// if(mode==="light") {
+//     color="white";
+// }
+
+// console.log(color);
+
+
+// if-else statement
+// let color;
+
+// if(mode==="dark") {
+//     color="black";
+// } else {
+//     color="white";
+// }
+
+// console.log(color);
+
+// odd or even
+// let num = 20;
+
+// if (num%2===0) {
+//     console.log(num,"is Even");
+// }   else {
+//     console.log(num, "is Odd");
+// }
+
+// else if Statement
+// let age = 18
+
+// if(age < 18) {
+//     console.log("Junior");
+// }   else if(age>60)  {
+//     console.log("Senior citizen");
+// }   else {
+//     console.log("middle");
+// }
