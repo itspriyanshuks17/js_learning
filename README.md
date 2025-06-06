@@ -1,7 +1,7 @@
 # JavaScript Tutorial
 
 ## Variable:
-1. var: variable can be re-declared & updated. A global scope variable
+1. var: variable can be re-declared & updated. A global scope variable(It is a global variable can be accessed outside the block)
 
 2. let: variable cannot be re-declared but can be updated. A block scope variable
 
@@ -25,6 +25,8 @@ console.log(age1);
 const age2=24
 console.log(age2);
 ```
+---
+
 
 ## Data types in JS: (to check data type: typeof())
 
@@ -81,8 +83,9 @@ to access any key:
 1. Object_name.key
 2. Object_name["key"]
 
-## Operators: 
-used to perform some operation on data
+---
+
+## Operators: used to perform some operation on data
 
 ### 1. Arithmetic Operators
 1. Modulus(%)-> Gives remainder
@@ -96,6 +99,7 @@ used to perform some operation on data
 ++a, --a -> pre(pehle change karrta hai value phir print karrta hai)
 a++, a-- -> post(pehle print karrega phir value change karega)
 ```
+----
 
 ### 2. Assignment Operators
 Used to assign values to variables
@@ -103,6 +107,7 @@ Used to assign values to variables
 ```
 =, +=, -=, *=, %=, **=
 ```
+----
 
 ### 3. Comparison Operators
 Used to compare two values
@@ -116,6 +121,7 @@ Used to compare two values
 === -> Equal to & type(checks if the data types are same or not)
 !== -> Not equal & type(checks if the data types differ or not)
 ```
+----
 
 ### 4. Logical Operators
 Used to check the logic of the expression: true or false
@@ -125,6 +131,7 @@ Used to check the logic of the expression: true or false
 || -> Logical OR
 ! -> NOT
 ```
+----
 
 ### 5. Ternary Operator
 ```
@@ -133,9 +140,10 @@ condition ? true output : false output;
 age > 18 ? "adult" : "not adult";
 ```
 
+---
 
-## Conditional Statements
-To implement some conditions in code
+## Conditional Statements: To implement some conditions in code
+
 
 ### 1. if Statement
 
@@ -145,6 +153,7 @@ if(mode === "dark-mode") {
   color = "black";
 }
 ```
+----
 
 ### 2. if-else Statement
 ```
@@ -156,6 +165,7 @@ if (num%2===0) {
     console.log(num, "is Odd");
 }
 ```
+----
 
 ### 3. else-if Statement
 ```
@@ -169,6 +179,7 @@ if(age < 18) {
     console.log("middle");
 }
 ```
+---
 
 ## Input and Display
 ```
@@ -176,3 +187,119 @@ alert("Hello!"); //displays one time pop up msg
 
 let num = prompt("Enter a number"); //displays msg as well as takes the input
 ```
+---
+
+## Loops in JS: Loops are used to execute a piece of code again and again
+
+
+### 1. for loop
+
+```
+for(let i=1; i<=5; i++) {
+  console.log("priyanshu");
+}
+```
+----
+
+### 2. Infinite Loop-> A loop that never ends
+```
+for(let count=1; count>0; count++) {
+    console.log("Priyanshu K Sharma");
+}
+
+console.log("Loop has ended");
+```
+----
+
+### 3. while loop
+```
+while(condition) {
+  // do some work
+}
+```
+----
+
+### 4. do while loop
+```
+do{
+  // do some work
+}while(condition);
+```
+
+### 5. for-of loop-> used for strings and arrays
+```
+for(let val of strVar) {
+    //do some work
+}
+```
+----
+
+### 6. for-in loop-> used for objects
+```
+for(let key in objVar) {
+    // do some work
+}
+```
+---
+## Strings in JS -> String is a sequence of characters used to represent text(It is immutable in java)
+
+### 1. Create String
+```
+let str="Priyanshu";
+```
+----
+
+### 2. String Length
+```
+str.length
+```
+----
+
+### 3. String Indices
+```
+str[0], str[1], str[2]
+```
+----
+
+### 4. Template Literals->A way to have embedded expressions in strings
+
+```
+`The cost of ${obj.item} is ${obj.price}`
+```
+----
+
+#### String Interpolation-> To create strings by doing substitution of placeholders
+
+```
+`String text ${expresiion} string text`
+\n: Next line
+\t: Tab
+```
+----
+
+#### Use case of Template literals
+```
+let obj = {
+    item: "pen",
+    price: 10,
+};
+
+let output = `The cost of ${obj.item} is ${obj.price}`;
+console.log(output);
+```
+----
+### String Methods-> These are built-in functions to manipulate a string
+
+```
+str.toUpperCase()
+str.toLowerCase()
+str.trim() //removes whitespaces
+str.slice(start, end) //returns part of string
+str1.concat(str2)
+str.replace(searchVal, newVal)
+str.replaceAll(searchVal, newVal) //replaces all the recurring valuess
+str.charAt(idx)
+```
+
+
+
