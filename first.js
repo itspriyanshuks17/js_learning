@@ -114,3 +114,89 @@ console.log("Priyanshu Kumar Sharma");*/
 // }   else {
 //     console.log("middle");
 // }
+
+
+// For Loop
+// Print 1 to 5
+// for(let count=1; count<=5; count++) {
+//     console.log("Priyanshu K Sharma");
+// }
+
+// console.log("Loop has ended");
+
+// Average of first 5 num
+// let sum=0;
+// let num=prompt("Enter the number:")
+
+// for(let i=1; i<=num; i++) {
+//     sum+=i;
+// }
+// console.log("Sum = ", sum);
+
+
+// Infinite Loop-> A loop that never ends
+// for(let count=1; count>0; count++) {
+//     console.log("Priyanshu K Sharma");
+// }
+
+// console.log("Loop has ended");
+
+// while loop
+// let i = 1;
+// while(i<=5) {
+//     console.log("PriyanshuKSharma");
+//     i++;
+// }
+
+// do while loop
+// let n =1;
+// do {
+//     console.log("PriyanshuKSharma");
+//     i++;
+// } while(n<=5);
+
+// for-of loop
+// let str = "PriyanshuKSharma";
+// let size=0;
+
+// for(let i of str) {
+//     console.log("i=", i);
+//     size++;
+// }
+
+// console.log("String size = ", size);
+
+
+// let student = {
+//     name: "Priyanshu",
+//     age:20,
+//     cgpa:9.89,
+//     isPass: true
+
+// };
+
+// for(let key in student) {
+//     console.log("key: ", key, "value: ", student[key]);
+// }
+
+// Strings
+let str = "Priyanshu K";
+let specialString = `This is a template literal`;
+let str2 = "Sharma";
+
+let obj = {
+    item: "pen",
+    price: 10,
+};
+
+let output = `The cost of ${obj.item} is ${obj.price}`;
+console.log(output);
+
+console.log(str.toUpperCase())
+console.log(str.toLowerCase())
+console.log(str.trim())
+console.log(str.slice(0, 10))
+console.log(str.concat(str2))
+console.log(str.replace('s', 'ss'))
+console.log(str2.replaceAll('a', 'aa'))
+console.log(str.charAt(3))
