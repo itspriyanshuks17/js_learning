@@ -180,23 +180,89 @@ console.log("Priyanshu Kumar Sharma");*/
 // }
 
 // Strings
-let str = "Priyanshu K";
-let specialString = `This is a template literal`;
-let str2 = "Sharma";
+// let str = "Priyanshu K";
+// let specialString = `This is a template literal`;
+// let str2 = "Sharma";
 
-let obj = {
-    item: "pen",
-    price: 10,
-};
+// let obj = {
+//     item: "pen",
+//     price: 10,
+// };
 
-let output = `The cost of ${obj.item} is ${obj.price}`;
-console.log(output);
+// let output = `The cost of ${obj.item} is ${obj.price}`;
+// console.log(output);
 
-console.log(str.toUpperCase())
-console.log(str.toLowerCase())
-console.log(str.trim())
-console.log(str.slice(0, 10))
-console.log(str.concat(str2))
-console.log(str.replace('s', 'ss'))
-console.log(str2.replaceAll('a', 'aa'))
-console.log(str.charAt(3))
+// console.log(str.toUpperCase())
+// console.log(str.toLowerCase())
+// console.log(str.trim())
+// console.log(str.slice(0, 10))
+// console.log(str.concat(str2))
+// console.log(str.replace('s', 'ss'))
+// console.log(str2.replaceAll('a', 'aa'))
+// console.log(str.charAt(3))
+
+// Arrays
+// let marks = [97,98,95,96,98]
+// console.log(marks)
+// console.log(marks.length) //property
+
+
+// Loop in Arrays
+// for loop: length is required
+
+// let heroes=["ironman", "thor", "hulk", "shaktiman", "spiderman", "antman"];
+
+// console.log("Using for loop:")
+// for(let idx=0; idx<heroes.length; idx++) {
+//     console.log(heroes[idx]);
+// }
+
+// for of
+// console.log("Using for of loop:")
+// for(let hero of heroes) {
+//     console.log(hero);
+// }
+
+
+let foodItems = ["potato", "apple", "banana", "tomato"];
+
+foodItems.push("chips"); //single value
+foodItems.push("chikoo", "kurkure", "orange"); //multiple items can be added
+console.log(foodItems);
+
+foodItems.pop(); //deletes last value
+console.log(foodItems);
+
+console.log(foodItems.toString());
+
+let marvelHeroes = ["thor", "spiderman", "ironman"];
+let dcHeroes = ["superman", "batman"];
+
+let heroes= marvelHeroes.concat(dcHeroes);
+console.log("Combined heroes are:", heroes);
+
+let indianHeroes = ["shaktiman", "krish"];
+let heroes1= marvelHeroes.concat(dcHeroes, indianHeroes);
+console.log("Combined heroes are:", heroes1);
+
+marvelHeroes.unshift("antman"); //adds on start
+console.log(marvelHeroes);
+
+marvelHeroes.shift(); //deletes from start
+console.log(marvelHeroes);
+
+
+console.log(marvelHeroes.slice(1,3)); //slicing
+
+//splice: (startIdx, no. of elements the user need to delte after the start index, "new element need to be added")
+marvelHeroes.splice(1,0,"hawkeye")
+console.log(marvelHeroes); 
+
+let arr=[1,2,3,4,5,6,7,8];
+
+// arr.splice(2,5,8);
+arr.splice(2,5,45,67,89,42,32);
+console.log(arr);
+
+arr.splice(2,5,45);
+console.log(arr);

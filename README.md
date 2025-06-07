@@ -300,6 +300,59 @@ str.replace(searchVal, newVal)
 str.replaceAll(searchVal, newVal) //replaces all the recurring valuess
 str.charAt(idx)
 ```
+---
+## Array in JS-> Collections of items, it is mutable
+```
+let heroes = ["ironman", "hulk", "thor", "batman"];
 
+let marks = [96, 75, 48, 83, 66];
+
+let info = ["Rahul", 86, "Delhi"];
+```
+----
+### Arrray indices-> stores data in linear and cotinuous form
+```
+arr[0], arrr[1], arr[2], ....
+```
+
+![Array in JS](images\arrays.png)
+----
+### Looping over an Array-> print all elements of array
+
+#### for loop
+```
+for(let idx=0; idx<arr.length; idx++) {
+    console.log(arr[idx]);
+}
+```
+
+-----
+
+#### for of loop
+```
+for(let a of arr) {
+    console.log(a);
+}
+```
+----
+
+### Array Methods
+```
+push(): add to end
+
+pop(): delete from end & return
+
+toString(): converts array to string
+
+concat(): joins multiple arrays & returns result
+
+unshift(): add to start
+
+shift(): delete from start & return
+
+slice(): returns a piece of the array-> used when we do not wwant to make changes in the entire array, just a slice of that -- slice(startIdx, endIdx)
+
+splice(): change original array(add, remove, replace) -- splice(startIdx, delCount, newEl1....)
+```
 
 
