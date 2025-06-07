@@ -315,7 +315,10 @@ let info = ["Rahul", 86, "Delhi"];
 arr[0], arrr[1], arr[2], ....
 ```
 
-![Array in JS](images\arrays.png)
+<p align="center">
+  <img src="images/arrays.png" width="600"/>
+</p>
+
 ----
 ### Looping over an Array-> print all elements of array
 
