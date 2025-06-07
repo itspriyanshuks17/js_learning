@@ -140,3 +140,102 @@ c. Add amazon at the end
 // c. Add amazon at the end
 // companies.push("Amazon");
 // console.log(companies);
+
+// Functions
+// 1. Create a function using the "function" keyword that takes a String as an argument & returns the number of vowels in the string
+
+// function countVowels(str) {
+//   let count=0;
+//   for(const s of str) {
+
+//     if(
+//       s==="a" || 
+//       s==="e" || 
+//       s==="i" || 
+//       s==="o" || 
+//       s==="u") {
+ 
+//         count++;
+//     }
+//   }
+//   console.log(str)
+//   console.log("No. of vowels are:",count);
+
+// }
+
+// countVowels(prompt("Enter the word:"));
+
+// same with arrow func
+
+// const countVow = (str) =>{
+//   let count=0;
+//   for(const s of str) {
+
+//     if(
+//       s==="a" || 
+//       s==="e" || 
+//       s==="i" || 
+//       s==="o" || 
+//       s==="u") {
+ 
+//         count++;
+//     }
+//   }
+//   console.log(str)
+//   console.log("No. of vowels are:",count);
+
+// }
+
+// countVow(prompt("Enter the word:"));
+
+// 2. For a given array of numbers, print the square f each value using "forEach" loop
+
+// let arr=[1,2,3,4,5];
+
+// let calSquare= (num)=>{
+//   console.log(num**2);
+// };
+
+// arr.forEach(calSquare);
+
+// 3. (Filter) -> We are given array of marks of students. Filter out the students who have scored 90+.
+// let marks = [87,98,94,45,78,90]
+
+// let bestMarks = marks.filter((val)=> {
+//   return val>=90;
+// })
+
+// console.log(bestMarks);
+
+/* 4. Take a number 'n' as input from user. Create an array of numbers from 1 to 'n'.
+Use the reduce method to calculate sum of all numbers in the array.
+Use the reduce method to calculate product of all numbers in the array.
+*/
+
+let n = prompt("Enter a new number: ");
+
+// Creating new array
+let arr = [];
+
+for(let i=1; i<=n; i++) {
+  arr[i-1]=i;
+}
+
+console.log("The array is: ", arr)
+
+// Sum of all elements
+let initialValue=0;
+const sumOfAll = arr.reduce(
+  (accumulator, currentValue)=> {
+    return accumulator+currentValue;
+  });
+
+console.log("Sum of elements: ", sumOfAll);
+
+// Factorial
+const prodOfAll = arr.reduce(
+    (accumulator, currentValue)=>{
+      return accumulator*currentValue;
+    });
+
+console.log("Product of elements: ", prodOfAll);
