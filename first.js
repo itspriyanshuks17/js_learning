@@ -224,45 +224,141 @@ console.log("Priyanshu Kumar Sharma");*/
 // }
 
 
-let foodItems = ["potato", "apple", "banana", "tomato"];
+// let foodItems = ["potato", "apple", "banana", "tomato"];
 
-foodItems.push("chips"); //single value
-foodItems.push("chikoo", "kurkure", "orange"); //multiple items can be added
-console.log(foodItems);
+// foodItems.push("chips"); //single value
+// foodItems.push("chikoo", "kurkure", "orange"); //multiple items can be added
+// console.log(foodItems);
 
-foodItems.pop(); //deletes last value
-console.log(foodItems);
+// foodItems.pop(); //deletes last value
+// console.log(foodItems);
 
-console.log(foodItems.toString());
+// console.log(foodItems.toString());
 
-let marvelHeroes = ["thor", "spiderman", "ironman"];
-let dcHeroes = ["superman", "batman"];
+// let marvelHeroes = ["thor", "spiderman", "ironman"];
+// let dcHeroes = ["superman", "batman"];
 
-let heroes= marvelHeroes.concat(dcHeroes);
-console.log("Combined heroes are:", heroes);
+// let heroes= marvelHeroes.concat(dcHeroes);
+// console.log("Combined heroes are:", heroes);
 
-let indianHeroes = ["shaktiman", "krish"];
-let heroes1= marvelHeroes.concat(dcHeroes, indianHeroes);
-console.log("Combined heroes are:", heroes1);
+// let indianHeroes = ["shaktiman", "krish"];
+// let heroes1= marvelHeroes.concat(dcHeroes, indianHeroes);
+// console.log("Combined heroes are:", heroes1);
 
-marvelHeroes.unshift("antman"); //adds on start
-console.log(marvelHeroes);
+// marvelHeroes.unshift("antman"); //adds on start
+// console.log(marvelHeroes);
 
-marvelHeroes.shift(); //deletes from start
-console.log(marvelHeroes);
+// marvelHeroes.shift(); //deletes from start
+// console.log(marvelHeroes);
 
 
-console.log(marvelHeroes.slice(1,3)); //slicing
+// console.log(marvelHeroes.slice(1,3)); //slicing
 
 //splice: (startIdx, no. of elements the user need to delte after the start index, "new element need to be added")
-marvelHeroes.splice(1,0,"hawkeye")
-console.log(marvelHeroes); 
+// marvelHeroes.splice(1,0,"hawkeye")
+// console.log(marvelHeroes); 
 
-let arr=[1,2,3,4,5,6,7,8];
+// let arr=[1,2,3,4,5,6,7,8];
 
-// arr.splice(2,5,8);
-arr.splice(2,5,45,67,89,42,32);
-console.log(arr);
+// // arr.splice(2,5,8);
+// arr.splice(2,5,45,67,89,42,32);
+// console.log(arr);
 
-arr.splice(2,5,45);
-console.log(arr);
+// arr.splice(2,5,45);
+// console.log(arr);
+
+// Functions
+
+// function myFunction(msg) { 
+//     //parameter -> input
+
+//     console.log(msg);
+// }
+
+// myFunction("Welcome to my website!!"); //argument
+
+// function sumUp(a, b) {
+//     sum=a+b;
+//     console.log(sum);
+// }
+
+// sumUp(Number(prompt("Enter first number:")),Number(prompt("Enter second number:")))
+
+// function sumUp1(a, b) {
+
+//     //local variables -> can only be accessed within the block scope
+//     sum=a+b;
+//     return sum;
+//     console.log(sum); // it will not run as func will always end at return
+// }
+
+// let val = sumUp1(3, 4);
+// console.log(val);
+
+
+// Arrow function
+// const sum=(a,b) => {
+//     return a+b;
+// }
+
+// let addition=sum(Number(prompt("Enter first number:")),Number(prompt("Enter second number:")))
+// console.log(addition);
+
+// const mul=(a,b) => {
+//     return a*b;
+// }
+
+// let product=mul(Number(prompt("Enter first number:")),Number(prompt("Enter second number:")))
+// console.log(product);
+
+// forEach loop in array
+// let arr=["Priyanshu", "k", "Sharma"];
+
+// arr.forEach(function printVal(val) { //value at each index
+//     console.log(val);
+// });
+
+// arr.forEach((val, idx, arr)=> {
+//     console.log(val);
+//     console.log(val.toUpperCase(), idx, arr);
+// })
+
+// Map
+// let nums = [20,33,56,70];
+
+// let newArr = nums.map((val)=> {
+//     return val**2;
+// });
+
+// console.log(newArr);
+
+// Filter
+// let nums = [20,33,56,70];
+
+// let evenArr = nums.filter((val)=> {
+//     return val%2===0 && val>=25;
+// });
+
+// console.log(evenArr);
+
+// Reduce
+// Sum of all nums
+// const array = [1,2,3,4];
+
+// // 0+1+2+3+4
+// const initialValue=0;
+// const sumWithInitial = array.reduce(
+//     (result, currentValue)=> result+currentValue, initialValue,
+// );
+
+// console.log(sumWithInitial);
+// Expected value: 10
+
+// Greatest of all nums
+// let array1=[3,7,9,6,3,12];
+
+// const output = array1.reduce((prev, curr)=> {
+//     return prev>curr?prev:curr;
+// });
+
+// console.log(output);

@@ -357,5 +357,86 @@ slice(): returns a piece of the array-> used when we do not wwant to make change
 
 splice(): change original array(add, remove, replace) -- splice(startIdx, delCount, newEl1....)
 ```
+---
 
+## Functions in JS
+- Block of code that performs a specific task, can be invoked whenever needed
+```
+function funcName() {
+    //do some works
+}
 
+function funcName(param1, param2, ...) {
+    //do some works
+}
+
+//function call
+funcName();
+```
+----
+
+### Arrow Functions
+- Compact way of writing function
+- Preferred for smaller block of code
+
+```
+const funcName = (param1, param2, ...) => {
+    //do some work
+}
+```
+
+----
+
+### forEach Loop in Arrays
+```
+arr.forEach(callBackFunction)
+```
+
+- callBackFunction: Here, it is a function to execute for each element in the array
+- A callback is a function passed as an argument to another function.
+- Higher order function-> takes other functions as a parameter or return other function
+- Method = function associated with object(func+obj)
+- Used when user need to perform operations
+- Example:
+
+```
+arr.forEach((val)=>{
+    console.log(val);
+})
+```
+
+----
+### Map
+
+- Creates a new array with the results of an operation.
+- The values returned by its callback function are used to form the new array.
+- Used when the user need to create a new array based the operations performed on the previous array
+
+```
+arr.map(callbackFnx(value, index, array))
+```
+
+```
+let newArr = arr.map((val)=>{
+    return val*2;
+})
+```
+----
+### Filter
+
+- Creates a new array of elements that give true for condotion/filter.
+- Eg: all even elements
+```
+let newArr = arr.filter((val)=>{
+    return val%2===0;
+})
+```
+----
+### Reduce
+- Performs some operations & reduce the array to a single value.
+- It returns that single value.
+```
+const sumWithInitial = array.reduce(
+    (accumulator, currentValue)=> accumulator+currentValue, initialValue
+);
+```
