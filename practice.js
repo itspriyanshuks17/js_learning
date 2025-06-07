@@ -73,8 +73,70 @@
 
 
 // Strings
-// Prompt the userer to enter their full name. Generate a username for them based on the input. Start username with @, followed by their full name and ending with the fullname length
-let fullName=prompt("Enter your username: ");
+// Prompt the user to enter their full name. Generate a username for them based on the input. Start username with @, followed by their full name and ending with the fullname length
+// let fullName=prompt("Enter your username: ");
 
-let userName = '@'+fullName+fullName.length;
-console.log(userName);
+// let userName = '@'+fullName+fullName.length;
+// console.log(userName);
+
+
+// Arrays
+// 1. For a given array with marks of students -> [85,97,44,37,76,60], find the average marks of the entire class
+
+// let marks = [85,97,44,37,76,60];
+
+// let sum=0;
+
+// for(let val of marks) {
+//   sum+=val;
+// }
+
+// average=sum/marks.length;
+// console.log("Average is: ", average);
+
+
+// 2. For a given array with prices of 5 items-> [250,645,300,900,50]. All items have an offer of 10% OFF on them. Change the array to store final price after applying offer.
+
+// let items=[250,645,300,900.50];
+
+// let offer = 0;
+
+// let i=0;
+// for(let val of items) {
+//   console.log(`Original price of ${val}: ${items[i]}`);
+//   offer=val/10;
+//   items[i]=items[i]-offer;
+//   console.log(`Discounted price of ${val}: ${items[i]}`);
+//   i++;
+// }
+
+
+// let items1=[250,645,300,900.50];
+// console.log("Original price of items:", items1);
+
+// for(let idx=0; idx<items1.length; idx++) {
+//   offer=items1[idx]/10;
+//   items1[idx]=items1[idx]-offer;
+// }
+
+// console.log("Discounted price of items:", items1);
+
+// 3. Create an array to store companies ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"]
+/*
+a. Remove the first company from the array
+b. Remove Uber & add Ola in its place
+c. Add amazon at the end
+*/
+
+// let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"]
+
+// a. Remove the first company from the array
+// console.log(companies.shift())
+
+// b. Remove Uber & add Ola in its place
+// let update=companies.splice(2,1,"Ola");
+// console.log(companies);
+
+// c. Add amazon at the end
+// companies.push("Amazon");
+// console.log(companies);
