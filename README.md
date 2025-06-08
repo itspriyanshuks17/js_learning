@@ -154,7 +154,7 @@ age > 18 ? "adult" : "not adult";
 | Arithmetic   | `+`, `-`, `*`, `/`, `%`, `**`, `++`, `--`      |
 | Assignment   | `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `**=`       |
 | Comparison   | `>`, `<`, `>=`, `<=`, `==`, `!=`, `===`, `!==` |
-| Logical      | &&, ||, !                                      |
+| Logical      | ||, !, &&                                       |
 | Ternary      | `condition ? expr1 : expr2`                    |
 
 ---
