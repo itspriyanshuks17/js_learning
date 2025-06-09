@@ -276,5 +276,48 @@ body.prepend(newBtn);*/
 
 // 4. Create a <p> tag in html, give it a class & some styling.
 // Now create a new class in CSS and try to append this class to the <p> element.
-let para = document.querySelector("p");
-para.setAttribute("class", "newClass");
+// let para = document.querySelector("p");
+// para.setAttribute("class", "newClass");
+
+// OOP in JS
+// 1. You are creating a website for your college. Create a class User with 2 properties, name & email. It also has a method called viewData() that allows user to view website data.
+
+// 2. Create a new class called Admin which inherits from User. Add a new method called editData to Admin that allows it ti edit website data.
+
+// let DATA = "secret information";
+// class User {
+//   constructor(name, email) {
+//     this.name=name;
+//     this.email=email;
+//   }
+
+//   viewData() {
+//     console.log("data =", DATA);
+//   }
+// }
+
+// class Admin extends User {
+//   editData() {
+//     DATA = "some new value";
+
+//   }
+// }
+
+
+// let student1 = new User("priyanshu", "priyanshu@email.com");
+// let student2 = new User("kumar","kumar@email.com");
+// let student3 = new User("sharma", "sharma@email.com");
+
+// let teacher1 = new User("Dean", "dean@college.com");
+
+// let admin1 = new Admin("admin", "admin@college.com");
+// console.log(student1);
+// console.log(student2);
+// console.log(student3);
+
+// student1.viewData();
+// teacher1.viewData();
+
+// console.log(admin1);
+// console.log(admin1.editData());
+// console.log(DATA);
