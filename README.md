@@ -923,9 +923,6 @@ rabbit.walk(); // Outputs: Rabbit hops (object method overrides prototype)
 </p>
 
 ----
-You're almost spot on! Here's a more polished and accurate version of your explanation of **JavaScript classes**:
-
----
 
 ## Classes in JavaScript
 
@@ -1027,5 +1024,76 @@ obj.greet(); // Output: Hello from Child
 
 * You can also call parent methods using `super.methodName()`.
 
-----
+
+---
+
+### Error Handling in JavaScript
+
+* JavaScript uses `try-catch` blocks to handle **runtime errors** gracefully.
+* This prevents the entire script from breaking when an error occurs.
+
+---
+
+#### Syntax:
+
+```js
+try {
+  // Normal code to try
+} catch (err) {
+  // Code to handle the error
+  // 'err' is the error object
+}
+```
+
+---
+
+#### Example:
+
+```js
+try {
+  let a = 5;
+  console.log(a + b); // 'b' is not defined → error!
+} catch (err) {
+  console.log(" Error occurred:", err.message);
+}
+```
+
+**Output:**
+
+```
+Error occurred: b is not defined
+```
+
+---
+
+#### Key Notes:
+
+* Only **runtime errors** are caught (not syntax errors).
+* `err` is an object with useful properties like `name`, `message`, and `stack`.
+
+---
+
+#### `finally` Block (Optional):
+
+Runs **no matter what** — whether there's an error or not.
+
+```js
+try {
+  // risky code
+} catch (err) {
+  // handle error
+} finally {
+  // always runs
+}
+```
+
+---
+
+#### Use Case:
+
+Useful for closing resources (files, network connections, loaders) even if an error occurs.
+
+---
+
+
 

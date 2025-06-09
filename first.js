@@ -506,64 +506,77 @@ para.remove()*/
 // const obj = new Child();
 // obj.greet(); 
 
-class Person {
-    constructor() {
-        console.log("Enter parent class");
-        this.species = "homo sapiens";
-    }
-    eat() {
-        console.log("eat");
-    }
+// class Person {
+//     constructor() {
+//         console.log("Enter parent class");
+//         this.species = "homo sapiens";
+//     }
+//     eat() {
+//         console.log("eat");
+//     }
 
-    sleep() {
-        console.log("sleep");
-    }
+//     sleep() {
+//         console.log("sleep");
+//     }
+// }
+
+// class Engineer extends Person {
+//     constructor(branch) {
+//         console.log("Enter child class");
+//         super();
+//         this.branch=branch;
+//         console.log("Exit from child constructor");
+//     }
+//     work() {
+//         super.eat();
+//         console.log("Solves problems, build something!!");
+//     }
+// }
+
+// class Doctor extends Person {
+//     work() {
+//         console.log("treat patients");
+//     }
+// }
+
+// let priyanshuObj = new Engineer("IT {CTIS}");
+// console.log(priyanshuObj);
+
+
+// class Parent {
+//   constructor(name) {
+//     this.name = name;
+//   }
+
+//   sayHello() {
+//     console.log(`Hello, I'm ${this.name} (Parent)`);
+//   }
+// }
+
+// class Child extends Parent {
+//   constructor(name, age) {
+//     super(name);  //to invoke parent class constructor
+//     this.age = age;
+//   }
+
+//   sayHello() {
+//     super.sayHello();
+//     console.log(`And I'm ${this.age} years old (Child)`);
+//   }
+// }
+
+// const kid = new Child("Priyanshu", 20);
+// kid.sayHello();
+
+// Error handling in JS
+try {
+  let a = 5;
+  console.log(a + b); // 'b' is not defined → error!
+} catch (err) {
+  console.log(" Error occurred:", err.message);
+} finally {
+    let a = 5;
+    let b = 10;
+    console.log(a + b);
+    console.log("This block always executes, regardless of error.");
 }
-
-class Engineer extends Person {
-    constructor(branch) {
-        console.log("Enter child class");
-        super();
-        this.branch=branch;
-        console.log("Exit from child constructor");
-    }
-    work() {
-        super.eat();
-        console.log("Solves problems, build something!!");
-    }
-}
-
-class Doctor extends Person {
-    work() {
-        console.log("treat patients");
-    }
-}
-
-let priyanshuObj = new Engineer("IT {CTIS}");
-console.log(priyanshuObj);
-
-
-class Parent {
-  constructor(name) {
-    this.name = name;
-  }
-
-  sayHello() {
-    console.log(`Hello, I'm ${this.name} (Parent)`);
-  }
-}
-
-class Child extends Parent {
-  constructor(name, age) {
-    super(name);  //to invoke parent class constructor
-    this.age = age;
-  }
-
-  sayHello() {
-    super.sayHello();
-    console.log(`And I'm ${this.age} years old (Child)`);
-  }
-}
-
-const kid = new Child("Priyanshu", 20);
-kid.sayHello();
