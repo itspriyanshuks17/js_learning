@@ -516,9 +516,11 @@ console.dir(window.document);
 </p>
 
 - We use `DOM` to perform dynamic modifications which cannot be done in html and css:
+
 ```js
 console.log(document.body.style.background="green");
 ```
+
 - Output: 
 <p align="center">
   <img src="images/dom-example.png" width="600"/>
@@ -693,7 +695,7 @@ You can dynamically **move** an element:
 document.body.appendChild(document.getElementById("header")); // Moves #header to <body>
 ```
 ---
-### classList
+### `classList`
 The `classList` property in JavaScript provides a convenient way to **add, remove, toggle, or check CSS classes** on an HTML element.
 
 ---
@@ -844,5 +846,186 @@ console.log(p.firstChild.nodeType);  // 3 => TEXT_NODE
 console.log(p.childNodes[1].nodeType); // 8 => COMMENT_NODE
 ```
 
+----
+
+## OOP in JS
+### Prototypes in JS
+
+
+* A **JavaScript object** is an entity that has **state** (properties) and **behavior** (methods).
+* JavaScript objects have a special hidden property called **`[[Prototype]]`**, which is accessible via the **`__proto__`** property (or set using `Object.setPrototypeOf()`).
+* If both an **object** and its **prototype** have a method with the same name, the **object's own method is used first** — this is called **method overriding**.
+* We can set or access the prototype using:
+
+  ```js
+  object.__proto__ = someOtherObject;
+  ```
+
 ---
+
+####  Note on `__proto__`:
+
+* `__proto__` is widely supported but considered **legacy**.
+* The modern and preferred way is:
+
+  ```js
+  Object.setPrototypeOf(obj, prototypeObj);
+  Object.getPrototypeOf(obj);
+  ```
+
+---
+###  Example:
+
+```js
+const emp = {
+    calcTax() {
+        console.log("tax rate is 10%");
+    },
+};
+
+const karanArjun = {
+    salary: 50000,
+};
+
+karanArjun.__proto__=emp;
+```
+<p align="center">
+  <img src="images/prototype_eg1.png" width="450"/>
+</p>
+
+
+- **Object's own method is used first**:
+
+
+```js
+const animal = {
+  eats: true,
+  walk() {
+    console.log("Animal walks");
+  }
+};
+
+const rabbit = {
+  jumps: true,
+  walk() {
+    console.log("Rabbit hops");
+  }
+};
+
+// Set prototype
+rabbit.__proto__ = animal;
+
+rabbit.walk(); // Outputs: Rabbit hops (object method overrides prototype)
+```
+
+<p align="center">
+  <img src="images/prototype_eg.png" width="450"/>
+</p>
+
+----
+You're almost spot on! Here's a more polished and accurate version of your explanation of **JavaScript classes**:
+
+---
+
+## Classes in JavaScript
+
+* A **class** is a **template for creating objects** (a blueprint).
+* The objects created from a class will have **state** (properties/variables) and **behavior** (methods/functions).
+
+---
+
+### Example:
+
+```js
+class MyClass {
+  constructor(name) {
+    this.name = name;         // state (property)
+  }
+
+  myMethod() {
+    console.log(`Hello, ${this.name}`);  // behavior (method)
+  }
+}
+
+let myObj = new MyClass("Priyanshu");
+myObj.myMethod(); // Output: Hello, Priyanshu
+```
+
+---
+
+### Key Points:
+
+* `constructor()` is a **special method** automatically called when a new object is created using `new`.
+  - automatically invoked by new
+  - initializes object
+  
+* `this` refers to the instance of the class.
+* Method names do **not use `function` keyword** inside a class.
+
+----
+
+###  Inheritance in JavaScript
+
+* **Inheritance** allows a class (**child/subclass**) to inherit properties and methods from another class (**parent/superclass**).
+* This promotes **code reuse** and supports the **OOP concept of hierarchy**.
+* If both parent and child define a method with the same name, the **child’s method overrides** the parent’s version — this is called **method overriding**.
+
+---
+
+#### Syntax:
+
+```js
+class Parent {
+  greet() {
+    console.log("Hello from Parent");
+  }
+}
+
+class Child extends Parent {
+  greet() {
+    console.log("Hello from Child");
+  }
+}
+
+const obj = new Child();
+obj.greet(); // Output: Hello from Child
+```
+
+---
+
+#### `super` Keyword:
+* The super keyword is used to call the constructor of its parent class to access the parent's properties and methods.
+* Use `super()` inside the child class constructor to call the parent’s constructor:
+
+  ```js
+  class Parent {
+  constructor(name) {
+    this.name = name;
+  }
+
+  sayHello() {
+    console.log(`Hello, I'm ${this.name} (Parent)`);
+  }
+  }
+
+  class Child extends Parent {
+  constructor(name, age) {
+    super(name); //calls Parent's constructor
+    this.age = age;
+  }
+
+  sayHello() {
+    super.sayHello(); //calls Parent's method
+    console.log(`And I'm ${this.age} years old (Child)`);
+  }
+  }
+
+  const kid = new Child("Priyanshu", 20);
+  kid.sayHello();
+
+  ```
+
+* You can also call parent methods using `super.methodName()`.
+
+----
 
