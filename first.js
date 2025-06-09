@@ -428,3 +428,142 @@ div.after(newBtn)
 let para = document.querySelector("p");
 para.remove()*/
 
+
+// Prototype
+/*const student = {
+    fullName: "Priyanshu",
+    marks: 93.9,
+    printMarks: function () {
+        console.log("marks = ", this.marks)
+    }
+}*/
+
+// const emp = {
+//     calcTax() {
+//         console.log("tax rate is 10%");
+//     },
+// };
+
+// const karanArjun = {
+//     salary: 50000,
+// };
+
+// karanArjun.__proto__=emp;
+
+// const animal = {
+//   eats: true,
+//   walk() {
+//     console.log("Animal walks");
+//   }
+// };
+
+// const rabbit = {
+//   jumps: true,
+//   walk() {
+//     console.log("Rabbit hops");
+//   }
+// };
+
+// // Set prototype
+// rabbit.__proto__ = animal;
+
+// rabbit.walk();
+
+
+// Classes
+// class ToyotaCar {
+//     start() {
+//         console.log("start");
+//     }
+
+//     stop() {
+//         console.log("stop");
+//     }
+
+//     setBrand(brand) {
+//         this.brandName=brand;
+//     }
+// }
+
+// let fortuner = new ToyotaCar();
+// let lexus = new ToyotaCar();
+// fortuner.start();
+// fortuner.setBrand("fortuner");
+
+// Inheritance
+// class Parent {
+//   greet() {
+//     console.log("Hello from Parent");
+//   }
+// }
+
+// class Child extends Parent {
+//   greet() {
+//     console.log("Hello from Child");
+//   }
+// }
+
+// const obj = new Child();
+// obj.greet(); 
+
+class Person {
+    constructor() {
+        console.log("Enter parent class");
+        this.species = "homo sapiens";
+    }
+    eat() {
+        console.log("eat");
+    }
+
+    sleep() {
+        console.log("sleep");
+    }
+}
+
+class Engineer extends Person {
+    constructor(branch) {
+        console.log("Enter child class");
+        super();
+        this.branch=branch;
+        console.log("Exit from child constructor");
+    }
+    work() {
+        super.eat();
+        console.log("Solves problems, build something!!");
+    }
+}
+
+class Doctor extends Person {
+    work() {
+        console.log("treat patients");
+    }
+}
+
+let priyanshuObj = new Engineer("IT {CTIS}");
+console.log(priyanshuObj);
+
+
+class Parent {
+  constructor(name) {
+    this.name = name;
+  }
+
+  sayHello() {
+    console.log(`Hello, I'm ${this.name} (Parent)`);
+  }
+}
+
+class Child extends Parent {
+  constructor(name, age) {
+    super(name);  //to invoke parent class constructor
+    this.age = age;
+  }
+
+  sayHello() {
+    super.sayHello();
+    console.log(`And I'm ${this.age} years old (Child)`);
+  }
+}
+
+const kid = new Child("Priyanshu", 20);
+kid.sayHello();
