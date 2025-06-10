@@ -1094,6 +1094,31 @@ try {
 Useful for closing resources (files, network connections, loaders) even if an error occurs.
 
 ---
+## Synchronous
+* Means the code runs in a particular sequence of instructions given in the program.
+* Each instruction waits for the previous instruction to complete its execution.
 
+---
+
+## Asynchronous Programming
+* Due to synchronous programming, sometimes important instructions get blocked due to some previous instructions, which causes a delay in the UI.
+* Asynchronous code execution allows to execute next instructions immediately and doesn't block the flow.
+* `async await` >> `promise chains` >> `callback hell`
+
+* Example:
+```js
+  console.log("one");
+  console.log("two");
+
+  setTimeout(()=>{
+    console.log("Hello, this is asynchronous function.");
+  }, 2000);
+
+  console.log("three");
+  console.log("four");
+```
+
+### Callbacks
+* A callback is a function passed as an argument to another function.
 
 

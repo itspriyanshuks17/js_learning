@@ -569,14 +569,31 @@ para.remove()*/
 // kid.sayHello();
 
 // Error handling in JS
-try {
-  let a = 5;
-  console.log(a + b); // 'b' is not defined → error!
-} catch (err) {
-  console.log(" Error occurred:", err.message);
-} finally {
-    let a = 5;
-    let b = 10;
-    console.log(a + b);
-    console.log("This block always executes, regardless of error.");
+// try {
+//   let a = 5;
+//   console.log(a + b); // 'b' is not defined → error!
+// } catch (err) {
+//   console.log(" Error occurred:", err.message);
+// } finally {
+//     let a = 5;
+//     let b = 10;
+//     console.log(a + b);
+//     console.log("This block always executes, regardless of error.");
+// }
+
+// Asynchronous Programming
+function hello() {
+  console.log("Hello, this is asynchronous function.");
 }
+
+setTimeout(hello, 2000); // This will call the hello function after 2 seconds(2000 miliseconds)
+
+console.log("one");
+console.log("two");
+
+setTimeout(()=>{
+    console.log("Hello, this is asynchronous function.");
+}, 2000);
+
+console.log("three");
+console.log("four");
